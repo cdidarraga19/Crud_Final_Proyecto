@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <meta charset="UTF-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+   
+    <link rel="stylesheet" href="../css/tienda.css"></link>
+    <link rel="stylesheet" href="../css/bootstrap.css"></link>
+    <link rel="stylesheet" href="../css/bootstrap-grid.css"></link>
+    <link rel="stylesheet" href="../css/bootstrap-utilities.css"></link>
+    <link rel="stylesheet" href="../css/bootstrap-reboot.css"></link>
+    <link rel="shortcut icon" href="#"></link>
+   
+</h:head>
+
+<h:body>
+
+    <!--ENCABEZADO-MENÚ-->
+
+    <h:header>
+      <div class="interior">
+        <a href="#" class="logo"><img src="../img/logo.png" alt="Logo"></img></a>
+        <nav class="navegacion">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="../index.xhtml">Nosotros</a></li>
+            <li class="submenu">
+              <a href="#">Productos</a>
+              <ul class="hijos">
+                <li><a href="">Salsamentaria</a></li>
+                <li><a href="">Licores</a></li>
+                <li><a href="">desechables</a></li>
+                <li><a href="">Dulecía</a></li>
+                <li><a href="">Lácteos</a></li>
+              </ul>
+            </li>
+            <li class="submenu">
+                <a href="#">Marcas</a>
+                <ul class="hijos">
+                  <li><a href="">Zenú</a></li>
+                  <li><a href="">Domingo</a></li>
+                  <li><a href="">Old Parr</a></li>
+                  <li><a href="">Colanta</a></li>
+                  <li><a href="">Rica</a></li>
+                </ul>
+              </li>
+                      <li class="nav-item"><a class="nav-link" href="../faces/html/login.xhtml">Ingresar</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="busqueda">
+        <form action="#">
+            <input type="text"
+                placeholder="  Buscar"
+                name="search"></input>
+            <button>
+                <i class="fa fa-search"
+                    style="font-size: 25px;">
+                </i>
+            </button>
+        </form>
+    </div>
+    
+
+    <button class="btnusuario" type="button" 
+    data-bs-toggle="modal" data-bs-target="#miModal"
+    ><img src="../img/usuario.png" width="42px" alt="" ></img></button>
+    <div class="modal fade" id="miModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+           <h5 class="modal-title tituloI" id="modalTitle">Iniciar Sesión</h5> 
+          </div>
+     
+        </div>
+      </div>
+
+    </div>
+    
+
+  
+    <button class="btncarrito" type="button" 
+    data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+    aria-controls="offcanvas"><img src="../img/carrito.png" width="50px" alt=""></img></button>
+
+         <div class="offcanvas offcanvas-end" tabindex="-1"
+         id="offcanvas" aria-labelledby="offcanvasLabel">
+
+         <div class="offcanvas-header">
+           <h5 class="offcanvas-title">Carrito de compras
+           </h5>
+         </div>
+
+         <div id="carrito" class="nav-link dropown-menu" aria-labelledby="navbarCollapse">
+          <table id="lista-carrito" class="table"><thead>
+            <tr>
+              <th>Imagen</th>
+              <th> Nombre </th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <div class="btnVP">
+
+        <button href="#" id="vaciar-carrito" class="btnVaciar">Vaciar Carrito</button>
+
+      <button href="../html/carrito.html" id="procesar-pedido" class="btnProcesar">Procesar compra</button>
+
+    </div>
+
+        </div>
+      </div>
+    
+
+
+    </h:header>
+
+
+      <!--CARRUSEL-->
+
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="../img/carrusel1.jpg" class="d-block w-100" alt="slide1"></img>
+          </div>
+          
+          <div class="carousel-item">
+            <img src="../img/carrusel2.jpg" class="d-block w-100" alt="slide3"></img>
+          </div>
+
+        
+          <div class="carousel-item">
+            <img src="../img/carrusel3.jpg" class="d-block w-100" alt="slide3"></img>
+          </div>
+        </div>
+
+      </div>
+
+
+       <!--APARTADO-->
+       
+       <section class="w-50 mx-auto text-center">
+        <h6 class="p-3 fs-2 border-bottom border-3 textcomprasegura">Tu compra es 100% segura</h6>
+    </section>
+
+     <!--SECCIONES-->
+
+     <div class="secciones">
+       <ul>
+         <li>
+           <input type="image" src="../img/btnsec1.png"></input>
+         </li>
+
+         <li>
+          <input type="image" src="../img/btnsec2.png"></input>
+         </li>
+
+         <li>
+          <input type="image" src="../img/btnsec3.png"></input>
+         </li>
+
+         <li>
+          <input type="image" src="../img/btnsec4.png"></input>
+         </li>
+       </ul>
+     </div>
+     
+     <!--SECCION DESCUENTOS CARDS-->
+
+     <section class="w-50 mx-auto text-center">
+      <h2 class="p-3 fs-2 border-top border-3 textoPDesc"> PRODUCTOS EN DESCUENTO</h2>
+    </section>
+
+      <!--CARDS-->
+    
+  <div class="container" id="lista-productos">
+    <div class="row justify-content-center">
+    <div class="col-4">
+      <div class="card border-warning mb-3" style="width: 15rem;">
+        <img src="../img/jamon_zenu.jpg" class="card-img-top" alt="..."></img>
+        <div class="card-body">
+          <h5 class="card-title">Jamón Zenú 450g</h5>
+          <p class="card-text precio">$9.300</p>
+          <a href="" class="btn btn-warning agregar-carrito" data-id="1" >Añadir al carrito</a>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col">
+      <div class="card border-warning mb-3" style="width: 15rem;">
+        <img src="../img/whiskyoldparr.png" class="card-img-top" alt="..."></img>
+        <div class="card-body">
+          <h5 class="card-title">Whisky Old Parr </h5>
+          <p class="card-text precio">$112.500</p>
+          <a href="" class="btn btn-warning agregar-carrito" data-id="2" >Añadir al carrito</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-warning mb-3" style="width: 15rem;">
+        <img src="../img/plato_desechable.jpg" class="card-img-top" alt="..."></img>
+        <div class="card-body">
+          <h5 class="card-title">Platos desechables 20 unds</h5>
+          <p class="card-text precio">$7.050</p>
+          <a href="" class="btn btn-warning agregar-carrito" data-id="3" >Añadir al carrito</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-warning mb-3" style="width: 15rem;">
+        <img src="../img/queso_bloque.jpg" class="card-img-top" alt="..."></img>
+        <div class="card-body">
+          <h5 class="card-title">Queso doble crema</h5>
+          <p class="card-text precio">$47.850</p>
+          <a href="" class="btn btn-warning agregar-carrito" data-id="4" >Añadir al carrito</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-warning mb-3" style="width: 15rem;">
+        <img src="../img/mayonesa.jpg" class="card-img-top" alt="..."></img>
+        <div class="card-body">
+          <h5 class="card-title">Mayonesa Fruco 350 g</h5>
+          <p class="card-text precio">$4.100</p>
+          <a href="" class="btn btn-warning agregar-carrito" data-id="5" >Añadir al carrito</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-warning mb-3" style="width: 15rem;" >
+        <img src="../img/papafacil.jpg" class="card-img-top" alt="..."></img>
+        <div class="card-body">
+          <h5 class="card-title">Papafacil 1000g</h5>
+          <p class="card-text precio">$5.000</p>
+          <a href="" class="btn btn-warning agregar-carrito" data-id="6" >Añadir al carrito</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-warning mb-3" style="width: 15rem;">
+        <img src="../img/arroz_roa.jpg" class="card-img-top" alt="..."></img>
+        <div class="card-body">
+          <h5 class="card-title">Arroz Roa 3000 g</h5>
+          <p class="card-text precio">$12.500</p>
+          <a href="" class="btn btn-warning agregar-carrito" data-id="7" >Añadir al carrito</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card border-warning mb-3" style="width: 15rem;">
+        <img src="../img/salsa_fruco.jpg" class="card-img-top" alt="..."></img>
+        <div class="card-body">
+          <h5 class="card-title">Salsa de tomate Fruco</h5>
+          <p class="card-text precio">$3.200</p>
+          <a href="" class="btn btn-warning agregar-carrito" data-id="8">Añadir al carrito</a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+      <!--MAPA-->
+
+      <div id="local" class="border-top border-2">
+        <div class="mapa"></div>
+        <div>
+          <div class="wrapper">
+            <h2>Ubicado en Bogotá, Colombia</h2>
+            <h2 class="text-primary mb-4" id="typewriter"></h2>
+            <p class="fs-5 text-body">Elejimos Bogotá para nuestra empresa con el objetivo de estar cerca a nuestros clientes.
+              Estamos ubicados en el barrio Kennedy, Cervantes.
+            </p>
+            <section class="d-flex" id="numeroslocal">
+              <div>
+                <p class="text-primary fs-5">273</p>
+                <p>Días de sol</p>
+              </div>
+              <div>
+                <p class="text-primary fs-5">100%</p>
+                <p>Abrobado</p>
+              </div>
+              <div>
+                <p class="text-primary fs-5">19 °C</p>
+                <p>Temperatura</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      
+<!--SCRIPT-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+
+<script src="../js/main.js" ></script>
+<script src="../js/carrito.js" ></script>
+<script src="../js/pedido.js" ></script>
+<script src="https://kit.fontawesome.com/f0e4ee5b28.js" crossorigin="anonymous"></script>
+
+
+
+<!--PIE DE PAGINA-->
+
+<footer class="piepagina" id="nosotros">
+  <div class="grupo1">
+
+    <div class="box">
+      <figure>
+        <a href="#">
+          <img src="../img/logo.png" alt=""></img>
+        </a>
+      </figure>
+    </div>
+
+    <div class="box">
+      <h2>SOBRE NOSOTROS</h2>
+      <p>Nuestra empresa fue fundada en el año 2016, después de hacer realidad la idea de formar una empresa y fomentar empleos directos que contribuyan al buen desarrollo de una sociedad Colombiana más justa y competitiva. Nuestra misión ha sido implementar procesos modernos de comercialización de acuerdo con el mercado y por último, nuestra visión es mantener nuestra calidad y expandirnos a otros horizontes para servirle de una manera más cómoda a nuestros clientes.
+      </p>
+    </div>
+
+    <div class="box">
+      <h2>SIGUENOS</h2>
+      <div class="redsocial">
+        <a href="#" class="fa fa-facebook" ></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grupo2">
+    <small> 2022 <b>Distribuidora Occidental</b> - Todos los Derechos Reservados.</small>
+  </div>
+
+</footer>
+</h:body>
+
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+		
+		<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+		crossorigin="anonymous"></link>
+		
+	<title>TIPOS DE DOCUMENTOS</title>
+	
+</h:head>
+<h:body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Usuarios/listaUsuario.xhtml?faces-redirect=true">Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Roles/listaRol.xhtml?faces-redirect=true">Roles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Estados/listaEstado.xhtml?faces-redirect=true">Estados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Permiso/listaPermiso.xhtml?faces-redirect=true">Permisos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/tiposDocumentos/listaTD.xhtml?faces-redirect=true">Tipos de documentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Peticion/listaPeticion.xhtml?faces-redirect=true">Peticiones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/TipoPeticion/listaTipoPeticion.xhtml?faces-redirect=true">Tipos de peticiones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Ventas/listaVenta.xhtml?faces-redirect=true">Ventas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/DetallesVenta/listaDetalleVenta.xhtml?faces-redirect=true">Detalles ventas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Inventarios/listaInventario.xhtml?faces-redirect=true">Inventario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/InventarioSalidas/listaInventarioSalida.xhtml?faces-redirect=true">Inventario Salida</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/InventarioEntradas/listaInventarioEntrada.xhtml?faces-redirect=true">Inventario Entrada</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Producto/listaProducto.xhtml?faces-redirect=true">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/CategoriaProducto/listaCategoria.xhtml?faces-redirect=true">Categorias de Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Marca/listaMarca.xhtml?faces-redirect=true">Marcas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Proveedores/listaProveedor.xhtml?faces-redirect=true">Proveedores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Compras/listaCompra.xhtml?faces-redirect=true">Compras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/DetallesCompra/listaDetalleCompra.xhtml?faces-redirect=true">Detalles de las compras</a>
+        </li>      
+        
+        </ul>
+    </div>
+  </div>
+</nav>
+
+	<h2 class="display-4 text-center pb-5 pt-5">
+		<h:outputText value="Lista TIPOS DE DOCUMENTOS"></h:outputText>
+	</h2>
+	
+	<h:form>
+	<f:facet name="header">EXPORTAR </f:facet>
+		<h:commandButton action="#{tipodocumentoBean.exportar()}"  class="btn btn-success text-center" value="EXPORTAR"></h:commandButton>
+	
+		<h:dataTable value="#{tipodocumentoBean.findAll()}" var="tipodedoc"
+			border="1" class="table table-striped">
+			<h:column>
+				<f:facet name="header">Id</f:facet>
+				<h:outputText value="#{tipodedoc.idTipoDocumento}"></h:outputText>
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">Nombre del tipo de documento</f:facet>
+				<h:outputText value="#{tipodedoc.nombreDocumento}"></h:outputText>
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">Siglas</f:facet>
+				<h:outputText value="#{tipodedoc.siglas}"></h:outputText>
+			</h:column>
+			<h:column>
+			
+			<f:facet name="header">EDITAR</f:facet>
+			<h:commandButton action="#{tipodocumentoBean.editar(tipodedoc.idTipoDocumento)}" value="EDITAR" class="btn btn-primary"></h:commandButton>
+			
+			</h:column>
+			<h:column>
+			
+			<f:facet name="header">ELIMINAR</f:facet>
+			<h:commandButton action="#{tipodocumentoBean.eliminarTD(tipodedoc.idTipoDocumento)}" class="btn btn-danger" value="ELIMINAR"></h:commandButton>
+			
+			</h:column>
+			
+		</h:dataTable>
+		
+		<div class="d-grid gap-2 d-md-flex justify-content-md-center">
+			<h:commandButton action="#{tipodocumentoBean.insertar}"
+				value="Añadir TIPOS DE DOCUMENTOS" class="btn btn-success text-center"></h:commandButton>
+		</div>
+
+
+	</h:form>
+</h:body>
+</html>

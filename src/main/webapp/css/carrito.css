@@ -1,0 +1,48 @@
+
+
+*body{
+    margin: 0;
+}
+
+.navpagcarrito{
+    margin-top: 0px; 
+	display: flex;
+	align-items: center;
+	z-index: 1000;
+}
+
+.comsegcarrito{
+    color: rgb(15, 217, 15);
+    margin-left: 420px;
+    font-family: 'Jost', sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.logopagcarrito{
+	float: left;
+	padding: 5px 60px 0px;
+}
+
+.logopagcarrito img{
+	height: 80px;
+}
+
+.logopagcarrito img:hover{
+	transform: scale(1.1);
+}
+
+.tabtotalc{
+    font-family: 'Jost', sans-serif;
+    margin-top: 30%;
+}
+
+.tabtoralproduc{
+    font-family: 'Jost', sans-serif;
+    margin-top: 10%;
+    margin-right: 100px;
+    background-color: #f8f9fa
+}

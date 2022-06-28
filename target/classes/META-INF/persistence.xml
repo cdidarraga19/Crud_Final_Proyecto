@@ -1,0 +1,41 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+  version="2.1">
+
+  <persistence-unit name="PERSISTENCE">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>com.sena.disocc.app.modelo.CategoriasProducto</class>
+    <class>com.sena.disocc.app.modelo.Compra</class>
+    <class>com.sena.disocc.app.modelo.DetallesCompra</class>
+    <class>com.sena.disocc.app.modelo.DetallesVenta</class>
+    <class>com.sena.disocc.app.modelo.Estado</class>
+    <class>com.sena.disocc.app.modelo.InventarioEntrada</class>
+    <class>com.sena.disocc.app.modelo.InventarioSalida</class>
+    <class>com.sena.disocc.app.modelo.Inventario</class>
+    <class>com.sena.disocc.app.modelo.Marca</class>
+    <class>com.sena.disocc.app.modelo.Permiso</class>
+    <class>com.sena.disocc.app.modelo.Peticione</class>
+    <class>com.sena.disocc.app.modelo.Producto</class>
+    <class>com.sena.disocc.app.modelo.Proveedore</class>
+    <class>com.sena.disocc.app.modelo.Respuesta</class>
+    <class>com.sena.disocc.app.modelo.Role</class>
+    <class>com.sena.disocc.app.modelo.TipoPeticione</class>
+    <class>com.sena.disocc.app.modelo.TiposDocumento</class>
+    <class>com.sena.disocc.app.modelo.Usuario</class>
+    <class>com.sena.disocc.app.modelo.Venta</class>
+  
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bd_disocc_test" />
+      <property name="javax.persistence.jdbc.user" value="root" />
+      <property name="javax.persistence.jdbc.password" value="" />
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.hbm2ddl.auto" value="update" /> 
+      <property name="hibernate.connection.pool_size" value="100"/>
+                   
+    </properties>
+  </persistence-unit>
+
+</persistence>

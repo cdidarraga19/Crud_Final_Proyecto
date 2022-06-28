@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+		
+		<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+		crossorigin="anonymous"></link>
+		
+	<title>PRODUCTOS</title>
+	
+</h:head>
+<h:body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Usuarios/listaUsuario.xhtml?faces-redirect=true">Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Roles/listaRol.xhtml?faces-redirect=true">Roles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Estados/listaEstado.xhtml?faces-redirect=true">Estados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Permiso/listaPermiso.xhtml?faces-redirect=true">Permisos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/tiposDocumentos/listaTD.xhtml?faces-redirect=true">Tipos de documentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Peticion/listaPeticion.xhtml?faces-redirect=true">Peticiones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/TipoPeticion/listaTipoPeticion.xhtml?faces-redirect=true">Tipos de peticiones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Ventas/listaVenta.xhtml?faces-redirect=true">Ventas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/DetallesVenta/listaDetalleVenta.xhtml?faces-redirect=true">Detalles ventas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Inventarios/listaInventario.xhtml?faces-redirect=true">Inventario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/InventarioSalidas/listaInventarioSalida.xhtml?faces-redirect=true">Inventario Salida</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/InventarioEntradas/listaInventarioEntrada.xhtml?faces-redirect=true">Inventario Entrada</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Producto/listaProducto.xhtml?faces-redirect=true">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/CategoriaProducto/listaCategoria.xhtml?faces-redirect=true">Categorias de Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Marca/listaMarca.xhtml?faces-redirect=true">Marcas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Proveedores/listaProveedor.xhtml?faces-redirect=true">Proveedores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/Compras/listaCompra.xhtml?faces-redirect=true">Compras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../faces/DetallesCompra/listaDetalleCompra.xhtml?faces-redirect=true">Detalles de las compras</a>
+        </li>      
+        
+        </ul>
+    </div>
+  </div>
+</nav>
+
+	<h2 class="display-4 text-center pb-5 pt-5">
+		<h:outputText value="Lista PRODUCTOS"></h:outputText>
+	</h2>
+	
+	<h:form>
+	<f:facet name="header">EXPORTAR </f:facet>
+		<h:commandButton action="#{productoBean.exportar()}"  class="btn btn-success text-center" value="EXPORTAR"></h:commandButton>
+		
+		
+		<div class="col-sm-4">
+		<h:outputLabel for="idRolFK" class="control-label  col-sm-4">MARCAL </h:outputLabel>
+		<h:selectOneMenu value="#{productoBean.idMarcaFK}" class ="form-control">
+		<f:selectItems value="#{productoBean.listaMarca}" itemValue="" itemLabel="Seleccionar" />
+		<f:selectItems value="#{productoBean.listaMarca}" var="marca" itemValue="#{marca.idMarca}" itemLabel="#{marca.nombreMarca}" />
+		</h:selectOneMenu>
+		</div>
+		
+		
+		
+		
+		<div class="col-sm-4">
+		<h:outputLabel for="idRolFK" class="control-label  col-sm-4">MARCAL </h:outputLabel>
+		<h:selectOneMenu value="#{productoBean.idCategoriaFK}" class ="form-control">
+		<f:selectItems value="#{productoBean.listaCategoriaP}" itemValue="" itemLabel="Seleccionar" />
+		<f:selectItems value="#{productoBean.listaCategoriaP}" var="categoria" itemValue="#{categoria.idCategoria}" itemLabel="#{categoria.nombreCategoria}" />	
+		</h:selectOneMenu>
+		</div>
+		
+		
+		
+		<h:dataTable value="#{productoBean.findAll()}" var="producto"
+			border="1" class="table table-striped">
+			<h:column>
+				<f:facet name="header">Id</f:facet>
+				<h:outputText value="#{producto.idProducto}"></h:outputText>
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">DESCRIPCION</f:facet>
+				<h:outputText value="#{producto.descripcion}"></h:outputText>
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">FECHA DE VENCIMIENTO</f:facet>
+				<h:outputText value="#{producto.fechaVencimiento}"></h:outputText>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">NOMBRE</f:facet>
+				<h:outputText value="#{producto.nombre}"></h:outputText>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">PRECIO UNIDAD</f:facet>
+				<h:outputText value="#{producto.precioUnidad}"></h:outputText>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">stock</f:facet>
+				<h:outputText value="#{producto.stockDisponible}"></h:outputText>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">MARCA</f:facet>
+				<h:outputText value="#{producto.marca.nombreMarca}"></h:outputText>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">CATEGORIA</f:facet>
+				<h:outputText value="#{producto.categoriasProducto.nombreCategoria}"></h:outputText>
+			</h:column>
+						
+			<h:column>
+			
+			<f:facet name="header">EDITAR</f:facet>
+			<h:commandButton action="#{productoBean.actualizar(producto.idProducto)}" value="EDITAR" class="btn btn-primary"></h:commandButton>
+			
+			</h:column>
+			<h:column>
+			
+			<f:facet name="header">ELIMINAR</f:facet>
+			<h:commandButton action="#{productoBean.eliminarProducto(producto.idProducto)}" class="btn btn-danger" value="ELIMINAR"></h:commandButton>
+			
+			</h:column>
+			
+		</h:dataTable>
+		
+		<div class="d-grid gap-2 d-md-flex justify-content-md-center">
+			<h:commandButton action="#{productoBean.crear}"
+				value="Añadir PRODUCTOS" class="btn btn-success text-center"></h:commandButton>
+		</div>
+
+
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,236 @@
+body {
+    background: #f1f1f1;
+}
+
+*{
+  margin: 2px;
+}
+
+nav ul li a:hover{
+  background-color: #FFFFFF;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.barra {
+    background: #001219;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+.dropdown-menu {
+    margin: 15px;
+    background: #FFFFFF;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.menuperfil {
+    color: white;
+}
+
+.menuperfil:focus {
+    background: #23ae6b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.cerrar:hover {
+    background-color: rgba(206, 65, 22, 0.877);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+}
+
+.user {
+    font-size: 35px;
+}
+
+.text-light{
+    height: 80 px;
+    width: 100;
+}
+
+/*BARRA LATERAL*/
+
+.barra-lateral {
+    background: #252121;
+    color: #fff;
+    min-width: 250px;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.barra-lateral a {
+    color: #fff;
+}
+
+
+/*ESTILOS MENU*/
+
+.barra-lateral .menu a {
+    display: block;
+    padding: 20px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.barra-lateral .menu a:hover {
+    background-color: #003C5D;
+    text-decoration: none;
+}
+
+.active {
+    background: #003C5D;
+}
+
+.barra-lateral .menu {
+    border-top: 5px #fff solid;
+}
+
+.barra-lateral .menu a i {
+    margin-right: 20px;
+}
+
+
+/*MAIN*/
+
+.main {
+    padding-top: 40px;
+}
+
+.main .columna {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+/*mediaquerys*/
+
+@media screen and (max-width:1300px) {
+    .barra-lateral {
+        min-width: auto;
+    }
+    .barra-lateral .menu a span {
+        display: none;
+    }
+    .barra-lateral .menu a i {
+        margin: 0;
+    }
+    .barra {
+        min-width: auto;
+    }
+    .dropdown-menu {
+        margin: 20px -79px 0px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .barra-lateral {
+        min-height: auto;
+    }
+    .barra-lateral .menu a {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .dropdown-menu {
+        margin: 20px -78px 0px;
+    }
+    .logocppe {
+        width: 100%;
+    }
+    body {
+        background: #D3D3D3;
+        font-size: 16px;
+        overflow: visible;
+    }
+}
+
+.formulariorecursos {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.568);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.menu {
+    border-top: 5px #fff solid;
+}
+
+@media screen and (max-width:575px) {
+    .barra-lateral {
+        height: auto;
+    }
+    .barra-lateral.menu a {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .dropdown-menu {
+        margin: 20px -78 0px;
+    }
+    body {
+        font-size: 16px;
+        overflow: visible;
+    }
+}
+.div{
+   height: 70px; width: 90px;
+  }
+
+  /*Formulario*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Form-Register{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #FFF;
+}
+
+
+.Form-Register h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.Controls{
+    width: 100%;
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #FFFFFF;
+    font-family: calibri;
+    font-size: 18px;
+}
+
+.Form-Register p {
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+.Form-Register a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+.Form-Register .Botons{
+    width: 100%;
+    background: #000000;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 10px 0;
+    font-size: 16px;
+}

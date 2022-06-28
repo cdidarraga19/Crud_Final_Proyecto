@@ -1,0 +1,305 @@
+* { font-family: Century, sans-serif; }
+
+body{
+    margin: 0;
+    padding: 0%;
+    background-color: #f8f4e7;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#mainNav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #001219;
+  }
+  #mainNav .navbar-toggler {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    text-transform: uppercase;
+
+  }
+  #mainNav .navbar-brand {
+    color: #ffc800;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    letter-spacing: 0.0625em;
+    text-transform: uppercase;
+
+  }
+  #mainNav .navbar-brand img {
+   height: 70px; width: 90px;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 0.95rem;
+    color: #fff;
+    letter-spacing: 0.0625em;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #ffc800;
+  }
+  
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 105px;
+    margin-left: 75px;
+    border: white 2px;
+}
+
+.navegacion{
+    font-weight: 600;
+    word-spacing: 60px;
+    font-size: 20px;
+    float: left;
+    margin-right: 150px;
+    padding-top: 10px;
+}
+
+.nav-link {
+    color: #000;
+}
+
+
+nav a:hover{
+    color: #fff;
+}
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+.iconoc{
+    width: 46px;
+    height: 46px;
+    margin-right: 80px;
+}
+
+.iconou{
+    width: 44px;
+    height: 44px;
+    margin-right: 80px;
+}
+
+.espacio{
+    background-color: #f8f4e7;
+    width: 100%;
+    height: 500px;
+    padding: 0%;
+    margin: 0%;
+}
+
+.buscar{
+    margin-left: 50px;
+    margin-top: 50px;
+    position: absolute;
+    padding: 12px;
+}
+
+.buscar input{
+    width: 0px;
+    height: 40 px;
+    padding: 2 0 px;
+    font-size: 20px;
+    color: black;
+    outline:  none;
+    border: 2px solid #ad2016;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.btn-xl {
+    padding: 1.25rem 2.5rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+.buscar:hover input{
+    width: 240px;
+}
+
+.buscar input:focus{
+    width: 240px;
+}
+
+.imgb{
+    width: auto;
+    height: auto;
+    margin: 10px;
+}
+
+.comprasegura{
+    background: #ae2012;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 90px;
+    padding-top: 5px;
+    margin: 0%;
+}
+
+.iconocoms{
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+    margin-top: 15px;
+    float: left;
+}
+
+.textocompras{
+    color: white;
+    font: 165% Century, sans-serif;
+    float: left;
+}
+
+.productoscard {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.estilo-c{
+    font-family: sans-serif;
+    width: 300px;
+    height: 100%;
+    margin: 50px;
+}
+
+.estilo-c .img-container{
+    overflow: hidden;
+    height: 290px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.estilo-c .img-container img{
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.estilo-c :hover .img-container img{
+    transform: scale(1.2);
+}
+
+.estilo-c .img-container .promo{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    font-size: 18px;
+    background: yellow;
+    padding: 8px;
+    color: black;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.estilo-c .info-container{
+    display: flex; 
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.estilo-c .info-container h3{
+    margin: 0%;
+}
+
+.estilo-c .info-container h3,
+.estilo-c .info-container strong,
+.estilo-c .info-container span{
+    padding: 5px 5px 5px 15px;
+    width: 100%;
+
+
+}
+
+
+.estilo-c .añadircarrito{
+    margin-top: 1px;
+    text-decoration: none;
+    color: white;
+    background-color: #001119;
+    padding: 12px;
+    border: 1px solid #001119;
+    border-radius: 25px;
+}
+
+.estilo-c .añadircarrito:hover{
+    color: #001119;
+    background-color: transparent;
+    border: 1px solid #001119;
+}
+
+
+.footer{
+    background: #001119;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 150px;
+}
+
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: 200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+
+}
+
+.usuario-icon{
+    margin-left: 20px;
+    color: #0a9396;
+  }
+  
+.carrito-icon{
+  margin-left: 10px;
+  color: #0a9396;
+}
+
+  .footer {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: #001219;
+  }
+
+  .color-final{
+    color: #f8f9fa;
+  }
+  /*Carrusel*/
+
+.carousel-inner img{
+    width: 100%;
+    height: 400px;
+}
+
+  

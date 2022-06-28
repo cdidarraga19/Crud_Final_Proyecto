@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+:root {
+    --login-bg:#ffffff;
+    --title-bg: #000000;
+    --button-bg: #FFC107;
+    --light-pink: #FFC107;
+    --image-bg:  #fff9ea;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to top, #fa3b2e 0%, #FFC107 100%);
+}
+
+.login-container {
+    height: 43.75em;
+    width: 60em;
+    margin: 6em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.login-info-container {
+    width: 50%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.image-container {
+    padding: 2rem;
+    width: 50%;
+    background-color: var(--image-bg);
+    box-sizing: border-box;
+    font-size: 5px;
+}
+
+.imgrecomendaciones{
+    width: 370px;
+    margin-left: 12px;
+    margin-top: 30px;
+    
+
+}
+
+.title {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+
+
+
+.login-info-container > p {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+}
+
+.inputs-container {
+    height: 55%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input, .btn {
+    width: 90%;
+    height: 3.125rem;
+    font-size: 1em;
+
+
+}
+
+.input {
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+    
+}
+
+.input:hover {
+    border: 2px solid var(--button-bg);
+}
+
+.btn {
+    width: 80%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+}
+
+.inputs-container p {
+    margin: 0;
+}
+
+.inputs-container{
+
+    width: 400px;
+    height: 630px;
+
+   
+}
+
+.span {
+    color: var(--light-pink);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .login-container {
+        width: 70%;
+        margin-top: 3rem;
+    }
+    .login-info-container {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .image-container {
+        display: none;
+    }  
+}
+
+@media screen and (max-width: 650px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-container {
+        height: 90%;
+    }
+
+    .login-info-container > p {
+        margin: 0;
+    }
+}
+
+
+.error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.error-activo{
+    display: block;
+}
+
+.valestado{
+    position: absolute;
+    right: 830px;
+    margin-top: 17px;
+    z-index: 100;  
+    opacity: 0;
+    font-size: 20px
+}
+
+.mensajeError{
+    height: 45px;
+    line-height: 45px;
+    background: #f66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.mensajeError-activo{
+    display: block;
+}
+
+.mensajeExito{
+    font-size: 24px;
+    color: #119200;
+    display: none;
+}
+
+.mensajeExito-activo{
+    display: block;
+}
+
+
+.formnumdoc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formnumdoc-correcto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formnumdoc-incorrecto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+
+.formnumdoc-correcto .valestado{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formnumdoc-incorrecto .valestado{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formnombres{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formnombres-correcto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formnombres-incorrecto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+
+.formnombres-correcto .valestado{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formnombres-incorrecto .valestado{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formapellidos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formapellidos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formapellidos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+
+.formapellidos-correcto .valestado{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formapellidos-incorrecto .valestado{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formtelefono{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formtelefono{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formtelefono{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+
+.formtelefono-correcto .valestado{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formtelefono-incorrecto .valestado{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formcorreo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formcorreo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formcorreo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+
+.formcorreo-correcto .valestado{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formcorreo-incorrecto .valestado{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formcontra{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formcontra{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+.formcontra{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+    font-family: 'Jost', sans-serif;
+}
+
+
+.formcontra-correcto .valestado{
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formcontra-incorrecto .valestado{
+    color: #bb2929;
+    opacity: 1;
+}
+
+
+
+
+
+
